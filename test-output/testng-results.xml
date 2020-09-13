@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16684" started-at="2020-09-13T02:46:38 EDT" finished-at="2020-09-13T02:46:55 EDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16684" started-at="2020-09-13T02:46:38 EDT" finished-at="2020-09-13T02:46:55 EDT">
+      <class name="com.herouapp.theinternet.LoginTest">
+        <test-method status="PASS" signature="loginTestCase()[pri:0, instance:com.herouapp.theinternet.LoginTest@222114ba]" name="loginTestCase" duration-ms="16639" started-at="2020-09-13T02:46:38 EDT" finished-at="2020-09-13T02:46:55 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestCase -->
+      </class> <!-- com.herouapp.theinternet.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
