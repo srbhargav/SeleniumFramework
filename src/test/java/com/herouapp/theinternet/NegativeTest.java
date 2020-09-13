@@ -9,8 +9,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class NegativeTest {
-	
-	@Parameters({ "username", "password", "expectedMessage"   })
+
+	@Parameters({ "username", "password", "expectedMessage" })
 	@Test(priority = 1, groups = { "negativetest", "smoketest" })
 
 	public void negativeLoginTestCase(String username, String password, String expectedErrorMessage) {
@@ -50,7 +50,7 @@ public class NegativeTest {
 
 		sleep(4000);
 		WebElement successMessage = driver.findElement(By.cssSelector("#flash"));
-		//String expectedMessage = "Your username is invalid!";
+		// String expectedMessage = "Your username is invalid!";
 		String actualMessage = successMessage.getText();
 		// Assert.assertEquals(actualMessage, expectedMessage, "Actual message is not
 		// the same as expected");
