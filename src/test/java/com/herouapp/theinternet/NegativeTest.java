@@ -9,7 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class NegativeTest {
-	@Test
+	@Test(priority = 1, groups = { "negativetest", "smoketest" })
+
 	public void invalidUsernameTestCase() {
 
 		System.out.println("Starting the Invalid Username Test Case");
@@ -62,7 +63,7 @@ public class NegativeTest {
 
 	
 	
-	@Test
+	@Test(priority = 2, enabled = true, groups = { "negativetest"})
 	public void invalidPasswordTestCase() {
 
 		System.out.println("Starting the Invalid Password Test Case");
