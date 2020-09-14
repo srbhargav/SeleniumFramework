@@ -3,6 +3,7 @@
 <suite name="NegativeTestsSuite" verbose="1">
 
 	<test name="PositiveTests">
+	<parameter name="browser" value="chrome" />
 		<groups>
 			<run>
 				<include name="positivetest"></include>

@@ -1,5 +1,7 @@
 package com.herouapp.theinternet;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +20,7 @@ public class LoginTestCase {
 
 	@Parameters({ "browser" })
 	@BeforeMethod(alwaysRun = true)
-	private void setUp(@Optional("chrome") String browser) {
+	private void setUp( String browser) {
 //		Create driver
 		switch (browser) {
 		case "chrome":
@@ -31,15 +33,14 @@ public class LoginTestCase {
 			driver = new FirefoxDriver();
 			break;
 
-		default:
-			System.out.println("Do not know how to start " + browser + ", starting chrome instead");
-			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-			driver = new ChromeDriver();
-			break;
+		/*
+		 * //default: System.out.println("Do not know how to start " + browser +
+		 * ", starting chrome instead"); System.setProperty("webdriver.chrome.driver",
+		 * "src/main/resources/chromedriver.exe"); driver = new ChromeDriver(); break;
+		 */
 		}
 
-		// sleep
-		sleep(2000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		// maximize the browser window
 		driver.manage().window().maximize();
